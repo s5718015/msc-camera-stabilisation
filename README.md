@@ -1,6 +1,7 @@
 # MSc Project: Real-Time Camera Motion Smoothing
 
 # For Video Please click my youtube link:https://youtu.be/GcV6GBDzJXQ
+# MSc Thesis paper is in the file set up and is downloadable.
 
 This repository contains the code and experiments for the MSc project on **Real-Time Camera Motion Smoothing for Virtual Production: A Comparative Study of Kalman, LSTM and Transformer Models**.  
 The project investigates and compares three approaches:
