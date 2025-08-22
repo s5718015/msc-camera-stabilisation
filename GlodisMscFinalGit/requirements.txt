@@ -1,0 +1,8 @@
+numpy
+matplotlib
+scikit-learn
+tensorflow
+joblib
+opencv-python
+filterpy
+pykalman
