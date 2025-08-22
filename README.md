@@ -19,55 +19,54 @@ Metrics include **Mean Squared Error (MSE)**, **curvature smoothness**, and **la
 ---
 
 ##  Project Structure
-
 Project_Submission/
-├── models/                              
+├── Models/
 │   ├── hybrid_kalman_lstm_model.h5
 │   ├── transformer_model_scaled.keras
 │   ├── transformer_x_scaler.pkl
-│   └── transformer_y_scaler.pkl       
+│   └── transformer_y_scaler.pkl
 │
 ├── Data/
 │   ├── X_kalman.npy
 │   ├── Y_smooth.npy
-│   ├── X_noisy_200.npy         
+│   ├── X_noisy_200.npy
 │   ├── Y_smooth_200.npy
-│   ├── handheld_camera_numpy.npy
-│   └── Input                               # For the side by side video
-
-├── AblationStudy/                          # training notebooks
-│ └── AblationCode
-│ │       ├── train_transformer_1head_model.py
-│ │       └── transformer_no_positional_encoding.py
-│ │ 
-│ └── AblationModels
-│         ├── transformer_1head.keras
-│         └── transformer_1head_x_scaler.pkl
-│         ├── transformer_1head_y_scaler.pkl
-│         └── transformer_no_posenc.keras
-│         ├── transformer_no_posenc_x_scaler.pkl
-│         └── transformer_no_posenc_y_scaler.pkl
-│ 
-├── Notebooks/                              # training notebooks
-│ ├── compare_transformer_vs_others.ipynb
-│ └── train_transformer_model.ipynb
-│       PriorWorksNotebooks
-│       ├── train_kalman_lstm_model.ipynb
-│       └── train_model.ipynb
-│   
-├── Code/
-│  ├── transformer_animated_visual_demo.py # Animated comparison
-│  ├── raw_vs_transformer_video_v2.py      # Side by side with added jitter (for contrast)
-│  ├── synthetic_data.py               # Synthetic eval PNGs (overlay + bars)
-│  ├── real_data.py                    # Real eval (rolling windows vs Kalman) PNGs
-│  └── utils_eval
+│   ├── handheld_camera_data_numpy.npy
+│   └── Input
+│       
 │
-├── Report/                            # Final report & video assets
+├── AblationStudy/
+│   ├── AblationCode/
+│   │   ├── train_transformer_1head_model.py
+│   │   └── transformer_no_positional_encoding.py
+│   ├── AblationModels/
+│   │   ├── transformer_1head.keras
+│   │   ├── transformer_1head_x_scaler.pkl
+│   │   ├── transformer_1head_y_scaler.pkl
+│   │   ├── transformer_no_posenc.keras
+│   │   ├── transformer_no_posenc_x_scaler.pkl
+│   │   └── transformer_no_posenc_y_scaler.pkl
+│   └── Notebooks/
+│       ├── compare_transformer_vs_others.ipynb
+│       ├── train_transformer_model.ipynb
+│       └── PriorWorksNotebooks/
+│           ├── train_kalman_lstm_model.ipynb
+│           └── train_model.ipynb
+│
+├── Code/
+│   ├── transformer_animated_visual_demo.py
+│   ├── raw_vs_transformer_video_v2.py
+│   ├── synthetic_data.py
+│   ├── real_data.py
+│   └── utils_eval.py
+│
+├── Report/
 │   ├── CameraStabilizationReport.pdf
-│   ├── VideoDemo.mp4
-│   
-└── requirements
-└── README.md                           
+│   └── VideoDemo.mp4
+│
+├── requirements.txt
+└── README.md
+                        
 
 
 ---
