@@ -1,11 +1,5 @@
 # RUN.md — How to Run the MSc Project
 
-This guide reproduces the figures/metrics shown in the video and thesis.  
-Repo layout assumed:
-```
-Code/  Data/  Models/  Report/  README.md  requirements.txt
-```
-
 ## 1) Environment
 
 ```bash
@@ -31,8 +25,6 @@ ls Models/transformer_model_scaled.keras Models/hybrid_kalman_lstm_model.h5    M
 ls Data/X_kalman.npy Data/Y_smooth.npy Data/handheld_camera_data_numpy.npy
 ```
 
-If any path differs, update the constants at the top of the scripts or rename the files.
-
 ## 3) Synthetic evaluation (metrics + PNGs)
 
 ```bash
@@ -57,14 +49,14 @@ Outputs:
 - `results/metrics_real_rolling_3way_thesis.json` and `.csv`  
 Note: On real data, Kalman is the deterministic reference → **Kalman MSE = 0**; emphasise curvature + latency.
 
-## 5) Animated XY demo (optional)
+## 5) Animated XY demo 
 
 ```bash
 # Saves a short GIF (use .mp4 if ffmpeg is installed)
 python Code/transformer_animated_visual_demo.py --save results/demo.gif
 ```
 
-## 6) RAW vs Transformer split-screen video (optional)
+## 6) RAW vs Transformer split-screen video 
 
 ```bash
 python Code/raw_vs_transformer_video_v2.py   --video Data/Input/Input.mp4   --output results/transformer_vs_raw_jitter.mp4   --x-path Data/X_kalman.npy   --y-path Data/Y_smooth.npy   --transformer-model Models/transformer_model_scaled.keras   --x-scaler Models/transformer_x_scaler.pkl   --y-scaler Models/transformer_y_scaler.pkl   --gain 1.0 --jitter-std 2.0
