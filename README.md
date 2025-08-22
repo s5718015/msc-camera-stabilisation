@@ -19,6 +19,8 @@ Metrics include **Mean Squared Error (MSE)**, **curvature smoothness**, and **la
 ---
 
 ##  Project Structure
+
+```text
 Project_Submission/
 ├── Models/
 │   ├── hybrid_kalman_lstm_model.h5
